@@ -59,7 +59,6 @@ BooleanEvaluator/
 6. **main.py**  
    **Purpose:** The entry point of the application that ties all components together.
 
-7. **requirements.txt**
-   **Purpose**: Lists all Python dependencies required for the project. This facilitates easy setup using pip.
+7. **requirements.txt**  
+   **Purpose:** Lists all Python dependencies required for the project. This facilitates easy setup using pip.
    - Note: Since the project primarily uses Python’s standard library, requirements.txt may be minimal or even empty. However, if you add external libraries in the future (e.g. for advanced parsing), list them here.
-
