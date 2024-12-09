@@ -6,6 +6,7 @@ from grammar.boolean_expression_v2.BooleanExpressionV2Lexer import (
 from grammar.boolean_expression_v2.BooleanExpressionV2Parser import (
     BooleanExpressionV2Parser,
 )
+from grammar.error_handlers.custom_error_listener import CustomErrorListener
 from utils.eval_visitor_utils import EvalVisitor
 
 def get_user_action():
@@ -16,7 +17,7 @@ def assign_variable(visitor):
     try:
         var = input("Variable (e.g., x or y): ").strip()
         if not var.isidentifier():
-            raise ValueError("Invalid variable name. Use valid identifiers (e.g., a, b1).")
+            CustomErrorListener.handle_custom_error("Invalid variable name. Use valid identifiers (e.g., a, b1).")
 
         value = input("Value (True/False/Number): ").strip()
         
@@ -28,24 +29,29 @@ def assign_variable(visitor):
         elif value.isdigit():
             visitor.declare_variable(var, int(value))
         else:
-            raise ValueError("Value must be 'true', 'false', or a number.")
+            CustomErrorListener.handle_custom_error("Value must be 'true', 'false', or a number.")
+            return
         print(f"Assigned: {var} = {visitor.variables[var]}")
     except ValueError as e:
-        print(e)
+        CustomErrorListener.handle_custom_error(e)
 
 def evaluate_expression(visitor):
     expression = input("Enter a Boolean or comparison expression: ")
     try:
         input_stream = InputStream(expression)
         lexer = BooleanExpressionV2Lexer(input_stream)
+        lexer.removeErrorListeners()
+        lexer.addErrorListener(CustomErrorListener())
         stream = CommonTokenStream(lexer)
         parser = BooleanExpressionV2Parser(stream)
+        parser.removeErrorListeners()
+        parser.addErrorListener(CustomErrorListener())
         tree = parser.expr()
 
         result = visitor.visit(tree)
         print("Result:", result)
     except Exception as e:
-        print(f"Error: {e}")
+        CustomErrorListener.handle_custom_error(f"Error: {e}")
 
 
 def main():
@@ -63,7 +69,7 @@ def main():
             print("Exiting the program.")
             break
         else:
-            print("Invalid action. Please choose from 'assign', 'eval', or 'exit'.")
+            CustomErrorListener.handle_custom_error("Invalid action. Please choose from 'assign', 'eval', or 'exit'.")
 
 
 if __name__ == "__main__":

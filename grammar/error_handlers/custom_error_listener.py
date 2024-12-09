@@ -8,7 +8,6 @@ class CustomErrorListener(ErrorListener):
         offending_symbol_text = (
             offending_symbol.text if offending_symbol else "Unknown symbol"
         )
-
         print(
             f"Syntax Error at line {line}, column {column}:\n"
             f"  Message: {msg}\n"
@@ -16,3 +15,7 @@ class CustomErrorListener(ErrorListener):
             f"  Recognizer: {type(recognizer).__name__}\n"
             f"  Exception: {str(e) if e else 'None'}"
         )
+
+    @staticmethod
+    def handle_custom_error(message):
+        print(f"Encountered: {message}")
