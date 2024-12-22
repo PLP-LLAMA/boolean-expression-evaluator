@@ -1,14 +1,13 @@
-from grammar.boolean_expression_v2.BooleanExpressionV2Visitor import (
-    BooleanExpressionV2Visitor,
+from grammar.boolean_expression.BooleanExpressionVisitor import (
+    BooleanExpressionVisitor,
 )
 
 
-class EvalVisitor(BooleanExpressionV2Visitor):
+class EvalVisitor(BooleanExpressionVisitor):
     def __init__(self):
         self.variables = {}
 
     def visitAndExpr(self, ctx):
-        print("Evaluating AND expression")
         left = self.visit(ctx.expr(0))
         if not left:
             return False
@@ -16,7 +15,6 @@ class EvalVisitor(BooleanExpressionV2Visitor):
         return left and right
 
     def visitOrExpr(self, ctx):
-        print("Evaluating OR expression")
         left = self.visit(ctx.expr(0))
         if left:
             return True

@@ -1,4 +1,4 @@
-# Generated from ./BooleanExpression.g4 by ANTLR 4.13.2
+# Generated from grammar/boolean_expression/BooleanExpression.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,24 +10,19 @@ else:
 
 def serializedATN():
     return [
-        4,1,16,56,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,1,0,5,0,12,8,0,
-        10,0,12,0,15,9,0,1,1,1,1,3,1,19,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,3,
-        1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,3,3,37,8,3,1,3,1,3,1,3,1,3,1,
-        3,1,3,1,3,1,3,1,3,1,3,5,3,49,8,3,10,3,12,3,52,9,3,1,4,1,4,1,4,0,
-        1,6,5,0,2,4,6,8,0,1,1,0,11,14,59,0,13,1,0,0,0,2,18,1,0,0,0,4,20,
-        1,0,0,0,6,36,1,0,0,0,8,53,1,0,0,0,10,12,3,2,1,0,11,10,1,0,0,0,12,
-        15,1,0,0,0,13,11,1,0,0,0,13,14,1,0,0,0,14,1,1,0,0,0,15,13,1,0,0,
-        0,16,19,3,4,2,0,17,19,3,6,3,0,18,16,1,0,0,0,18,17,1,0,0,0,19,3,1,
-        0,0,0,20,21,5,1,0,0,21,22,5,15,0,0,22,23,5,2,0,0,23,24,3,6,3,0,24,
-        25,5,3,0,0,25,5,1,0,0,0,26,27,6,3,-1,0,27,28,5,6,0,0,28,37,3,6,3,
-        6,29,30,5,7,0,0,30,31,3,6,3,0,31,32,5,8,0,0,32,37,1,0,0,0,33,37,
-        5,15,0,0,34,37,5,9,0,0,35,37,5,10,0,0,36,26,1,0,0,0,36,29,1,0,0,
-        0,36,33,1,0,0,0,36,34,1,0,0,0,36,35,1,0,0,0,37,50,1,0,0,0,38,39,
-        10,8,0,0,39,40,5,4,0,0,40,49,3,6,3,9,41,42,10,7,0,0,42,43,5,5,0,
-        0,43,49,3,6,3,8,44,45,10,5,0,0,45,46,3,8,4,0,46,47,3,6,3,6,47,49,
-        1,0,0,0,48,38,1,0,0,0,48,41,1,0,0,0,48,44,1,0,0,0,49,52,1,0,0,0,
-        50,48,1,0,0,0,50,51,1,0,0,0,51,7,1,0,0,0,52,50,1,0,0,0,53,54,7,0,
-        0,0,54,9,1,0,0,0,5,13,18,36,48,50
+        4,1,13,38,2,0,7,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,13,
+        8,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+        1,0,1,0,1,0,5,0,33,8,0,10,0,12,0,36,9,0,1,0,0,1,0,1,0,0,0,46,0,12,
+        1,0,0,0,2,3,6,0,-1,0,3,4,5,9,0,0,4,13,3,0,0,9,5,6,5,5,0,0,6,7,3,
+        0,0,0,7,8,5,6,0,0,8,13,1,0,0,0,9,13,5,11,0,0,10,13,5,10,0,0,11,13,
+        5,12,0,0,12,2,1,0,0,0,12,5,1,0,0,0,12,9,1,0,0,0,12,10,1,0,0,0,12,
+        11,1,0,0,0,13,34,1,0,0,0,14,15,10,11,0,0,15,16,5,8,0,0,16,33,3,0,
+        0,12,17,18,10,10,0,0,18,19,5,7,0,0,19,33,3,0,0,11,20,21,10,8,0,0,
+        21,22,5,1,0,0,22,33,3,0,0,9,23,24,10,7,0,0,24,25,5,2,0,0,25,33,3,
+        0,0,8,26,27,10,6,0,0,27,28,5,3,0,0,28,33,3,0,0,7,29,30,10,5,0,0,
+        30,31,5,4,0,0,31,33,3,0,0,6,32,14,1,0,0,0,32,17,1,0,0,0,32,20,1,
+        0,0,0,32,23,1,0,0,0,32,26,1,0,0,0,32,29,1,0,0,0,33,36,1,0,0,0,34,
+        32,1,0,0,0,34,35,1,0,0,0,35,1,1,0,0,0,36,34,1,0,0,0,3,12,32,34
     ]
 
 class BooleanExpressionParser ( Parser ):
@@ -40,23 +35,16 @@ class BooleanExpressionParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'bool'", "'='", "';'", "'AND'", "'OR'", 
-                     "'NOT'", "'('", "')'", "'true'", "'false'", "'=='", 
-                     "'!='", "'<'", "'>'" ]
+    literalNames = [ "<INVALID>", "'<'", "'>'", "'=='", "'!='", "'('", "')'", 
+                     "'AND'", "'OR'", "'NOT'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "ID", "WS" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "AND", "OR", 
+                      "NOT", "BOOL", "IDENTIFIER", "NUMBER", "WS" ]
 
-    RULE_program = 0
-    RULE_statement = 1
-    RULE_declaration = 2
-    RULE_expression = 3
-    RULE_comparisonOp = 4
+    RULE_expr = 0
 
-    ruleNames =  [ "program", "statement", "declaration", "expression", 
-                   "comparisonOp" ]
+    ruleNames =  [ "expr" ]
 
     EOF = Token.EOF
     T__0=1
@@ -65,16 +53,13 @@ class BooleanExpressionParser ( Parser ):
     T__3=4
     T__4=5
     T__5=6
-    T__6=7
-    T__7=8
-    T__8=9
-    T__9=10
-    T__10=11
-    T__11=12
-    T__12=13
-    T__13=14
-    ID=15
-    WS=16
+    AND=7
+    OR=8
+    NOT=9
+    BOOL=10
+    IDENTIFIER=11
+    NUMBER=12
+    WS=13
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -85,302 +70,470 @@ class BooleanExpressionParser ( Parser ):
 
 
 
-    class ProgramContext(ParserRuleContext):
+    class ExprContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def statement(self, i:int=None):
+
+        def getRuleIndex(self):
+            return BooleanExpressionParser.RULE_expr
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+    class AndExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(BooleanExpressionParser.StatementContext)
+                return self.getTypedRuleContexts(BooleanExpressionParser.ExprContext)
             else:
-                return self.getTypedRuleContext(BooleanExpressionParser.StatementContext,i)
+                return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,i)
 
-
-        def getRuleIndex(self):
-            return BooleanExpressionParser.RULE_program
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProgram" ):
-                listener.enterProgram(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProgram" ):
-                listener.exitProgram(self)
-
-
-
-
-    def program(self):
-
-        localctx = BooleanExpressionParser.ProgramContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_program)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 13
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 34498) != 0):
-                self.state = 10
-                self.statement()
-                self.state = 15
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class StatementContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def declaration(self):
-            return self.getTypedRuleContext(BooleanExpressionParser.DeclarationContext,0)
-
-
-        def expression(self):
-            return self.getTypedRuleContext(BooleanExpressionParser.ExpressionContext,0)
-
-
-        def getRuleIndex(self):
-            return BooleanExpressionParser.RULE_statement
+        def AND(self):
+            return self.getToken(BooleanExpressionParser.AND, 0)
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatement" ):
-                listener.enterStatement(self)
+            if hasattr( listener, "enterAndExpr" ):
+                listener.enterAndExpr(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatement" ):
-                listener.exitStatement(self)
+            if hasattr( listener, "exitAndExpr" ):
+                listener.exitAndExpr(self)
 
-
-
-
-    def statement(self):
-
-        localctx = BooleanExpressionParser.StatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_statement)
-        try:
-            self.state = 18
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [1]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 16
-                self.declaration()
-                pass
-            elif token in [6, 7, 9, 10, 15]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 17
-                self.expression(0)
-                pass
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAndExpr" ):
+                return visitor.visitAndExpr(self)
             else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
+                return visitor.visitChildren(self)
 
 
-    class DeclarationContext(ParserRuleContext):
-        __slots__ = 'parser'
+    class BoolExprContext(ExprContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-        def ID(self):
-            return self.getToken(BooleanExpressionParser.ID, 0)
-
-        def expression(self):
-            return self.getTypedRuleContext(BooleanExpressionParser.ExpressionContext,0)
-
-
-        def getRuleIndex(self):
-            return BooleanExpressionParser.RULE_declaration
+        def BOOL(self):
+            return self.getToken(BooleanExpressionParser.BOOL, 0)
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclaration" ):
-                listener.enterDeclaration(self)
+            if hasattr( listener, "enterBoolExpr" ):
+                listener.enterBoolExpr(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclaration" ):
-                listener.exitDeclaration(self)
+            if hasattr( listener, "exitBoolExpr" ):
+                listener.exitBoolExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBoolExpr" ):
+                return visitor.visitBoolExpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
+    class GreaterThanExprContext(ExprContext):
 
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-    def declaration(self):
-
-        localctx = BooleanExpressionParser.DeclarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_declaration)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 20
-            self.match(BooleanExpressionParser.T__0)
-            self.state = 21
-            self.match(BooleanExpressionParser.ID)
-            self.state = 22
-            self.match(BooleanExpressionParser.T__1)
-            self.state = 23
-            self.expression(0)
-            self.state = 24
-            self.match(BooleanExpressionParser.T__2)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class ExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def expression(self, i:int=None):
+        def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(BooleanExpressionParser.ExpressionContext)
+                return self.getTypedRuleContexts(BooleanExpressionParser.ExprContext)
             else:
-                return self.getTypedRuleContext(BooleanExpressionParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,i)
 
-
-        def ID(self):
-            return self.getToken(BooleanExpressionParser.ID, 0)
-
-        def comparisonOp(self):
-            return self.getTypedRuleContext(BooleanExpressionParser.ComparisonOpContext,0)
-
-
-        def getRuleIndex(self):
-            return BooleanExpressionParser.RULE_expression
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpression" ):
-                listener.enterExpression(self)
+            if hasattr( listener, "enterGreaterThanExpr" ):
+                listener.enterGreaterThanExpr(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpression" ):
-                listener.exitExpression(self)
+            if hasattr( listener, "exitGreaterThanExpr" ):
+                listener.exitGreaterThanExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGreaterThanExpr" ):
+                return visitor.visitGreaterThanExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class EqualsExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(BooleanExpressionParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEqualsExpr" ):
+                listener.enterEqualsExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEqualsExpr" ):
+                listener.exitEqualsExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualsExpr" ):
+                return visitor.visitEqualsExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class NumberExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def NUMBER(self):
+            return self.getToken(BooleanExpressionParser.NUMBER, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNumberExpr" ):
+                listener.enterNumberExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNumberExpr" ):
+                listener.exitNumberExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumberExpr" ):
+                return visitor.visitNumberExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class VarExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def IDENTIFIER(self):
+            return self.getToken(BooleanExpressionParser.IDENTIFIER, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVarExpr" ):
+                listener.enterVarExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVarExpr" ):
+                listener.exitVarExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarExpr" ):
+                return visitor.visitVarExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class NotExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def NOT(self):
+            return self.getToken(BooleanExpressionParser.NOT, 0)
+        def expr(self):
+            return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNotExpr" ):
+                listener.enterNotExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNotExpr" ):
+                listener.exitNotExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNotExpr" ):
+                return visitor.visitNotExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class ParenExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParenExpr" ):
+                listener.enterParenExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParenExpr" ):
+                listener.exitParenExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParenExpr" ):
+                return visitor.visitParenExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class LessThanExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(BooleanExpressionParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLessThanExpr" ):
+                listener.enterLessThanExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLessThanExpr" ):
+                listener.exitLessThanExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLessThanExpr" ):
+                return visitor.visitLessThanExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class NotEqualsExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(BooleanExpressionParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNotEqualsExpr" ):
+                listener.enterNotEqualsExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNotEqualsExpr" ):
+                listener.exitNotEqualsExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNotEqualsExpr" ):
+                return visitor.visitNotEqualsExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class OrExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BooleanExpressionParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(BooleanExpressionParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(BooleanExpressionParser.ExprContext,i)
+
+        def OR(self):
+            return self.getToken(BooleanExpressionParser.OR, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOrExpr" ):
+                listener.enterOrExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOrExpr" ):
+                listener.exitOrExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOrExpr" ):
+                return visitor.visitOrExpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
-    def expression(self, _p:int=0):
+    def expr(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = BooleanExpressionParser.ExpressionContext(self, self._ctx, _parentState)
+        localctx = BooleanExpressionParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 6
-        self.enterRecursionRule(localctx, 6, self.RULE_expression, _p)
+        _startState = 0
+        self.enterRecursionRule(localctx, 0, self.RULE_expr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 36
+            self.state = 12
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [6]:
-                self.state = 27
+            if token in [9]:
+                localctx = BooleanExpressionParser.NotExprContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+
+                self.state = 3
+                self.match(BooleanExpressionParser.NOT)
+                self.state = 4
+                self.expr(9)
+                pass
+            elif token in [5]:
+                localctx = BooleanExpressionParser.ParenExprContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 5
+                self.match(BooleanExpressionParser.T__4)
+                self.state = 6
+                self.expr(0)
+                self.state = 7
                 self.match(BooleanExpressionParser.T__5)
-                self.state = 28
-                self.expression(6)
                 pass
-            elif token in [7]:
-                self.state = 29
-                self.match(BooleanExpressionParser.T__6)
-                self.state = 30
-                self.expression(0)
-                self.state = 31
-                self.match(BooleanExpressionParser.T__7)
-                pass
-            elif token in [15]:
-                self.state = 33
-                self.match(BooleanExpressionParser.ID)
-                pass
-            elif token in [9]:
-                self.state = 34
-                self.match(BooleanExpressionParser.T__8)
+            elif token in [11]:
+                localctx = BooleanExpressionParser.VarExprContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 9
+                self.match(BooleanExpressionParser.IDENTIFIER)
                 pass
             elif token in [10]:
-                self.state = 35
-                self.match(BooleanExpressionParser.T__9)
+                localctx = BooleanExpressionParser.BoolExprContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 10
+                self.match(BooleanExpressionParser.BOOL)
+                pass
+            elif token in [12]:
+                localctx = BooleanExpressionParser.NumberExprContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 11
+                self.match(BooleanExpressionParser.NUMBER)
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 50
+            self.state = 34
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 48
+                    self.state = 32
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
                     if la_ == 1:
-                        localctx = BooleanExpressionParser.ExpressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 38
-                        if not self.precpred(self._ctx, 8):
+                        localctx = BooleanExpressionParser.OrExprContext(self, BooleanExpressionParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 14
+                        if not self.precpred(self._ctx, 11):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
-                        self.state = 39
-                        self.match(BooleanExpressionParser.T__3)
-                        self.state = 40
-                        self.expression(9)
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
+                        self.state = 15
+                        self.match(BooleanExpressionParser.OR)
+                        self.state = 16
+                        self.expr(12)
                         pass
 
                     elif la_ == 2:
-                        localctx = BooleanExpressionParser.ExpressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 41
-                        if not self.precpred(self._ctx, 7):
+                        localctx = BooleanExpressionParser.AndExprContext(self, BooleanExpressionParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 17
+                        if not self.precpred(self._ctx, 10):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 42
-                        self.match(BooleanExpressionParser.T__4)
-                        self.state = 43
-                        self.expression(8)
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
+                        self.state = 18
+                        self.match(BooleanExpressionParser.AND)
+                        self.state = 19
+                        self.expr(11)
                         pass
 
                     elif la_ == 3:
-                        localctx = BooleanExpressionParser.ExpressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 44
+                        localctx = BooleanExpressionParser.LessThanExprContext(self, BooleanExpressionParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 20
+                        if not self.precpred(self._ctx, 8):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
+                        self.state = 21
+                        self.match(BooleanExpressionParser.T__0)
+                        self.state = 22
+                        self.expr(9)
+                        pass
+
+                    elif la_ == 4:
+                        localctx = BooleanExpressionParser.GreaterThanExprContext(self, BooleanExpressionParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 23
+                        if not self.precpred(self._ctx, 7):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
+                        self.state = 24
+                        self.match(BooleanExpressionParser.T__1)
+                        self.state = 25
+                        self.expr(8)
+                        pass
+
+                    elif la_ == 5:
+                        localctx = BooleanExpressionParser.EqualsExprContext(self, BooleanExpressionParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 26
+                        if not self.precpred(self._ctx, 6):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+                        self.state = 27
+                        self.match(BooleanExpressionParser.T__2)
+                        self.state = 28
+                        self.expr(7)
+                        pass
+
+                    elif la_ == 6:
+                        localctx = BooleanExpressionParser.NotEqualsExprContext(self, BooleanExpressionParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 29
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 45
-                        self.comparisonOp()
-                        self.state = 46
-                        self.expression(6)
+                        self.state = 30
+                        self.match(BooleanExpressionParser.T__3)
+                        self.state = 31
+                        self.expr(6)
                         pass
 
              
-                self.state = 52
+                self.state = 36
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -391,72 +544,39 @@ class BooleanExpressionParser ( Parser ):
         return localctx
 
 
-    class ComparisonOpContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-
-        def getRuleIndex(self):
-            return BooleanExpressionParser.RULE_comparisonOp
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComparisonOp" ):
-                listener.enterComparisonOp(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComparisonOp" ):
-                listener.exitComparisonOp(self)
-
-
-
-
-    def comparisonOp(self):
-
-        localctx = BooleanExpressionParser.ComparisonOpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_comparisonOp)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 53
-            _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 30720) != 0)):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
 
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[3] = self.expression_sempred
+        self._predicates[0] = self.expr_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
         else:
             return pred(localctx, predIndex)
 
-    def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
+    def expr_sempred(self, localctx:ExprContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 8)
+                return self.precpred(self._ctx, 11)
          
 
             if predIndex == 1:
-                return self.precpred(self._ctx, 7)
+                return self.precpred(self._ctx, 10)
          
 
             if predIndex == 2:
+                return self.precpred(self._ctx, 8)
+         
+
+            if predIndex == 3:
+                return self.precpred(self._ctx, 7)
+         
+
+            if predIndex == 4:
+                return self.precpred(self._ctx, 6)
+         
+
+            if predIndex == 5:
                 return self.precpred(self._ctx, 5)
          
 
