@@ -9,8 +9,10 @@ from grammar.boolean_expression.BooleanExpressionParser import (
 from grammar.error_handlers.custom_error_listener import CustomErrorListener
 from utils.eval_visitor_utils import EvalVisitor
 
+
 def print_rules():
-    print(""" 
+    print(
+        """ 
           1. Comparison Operator
                 ==  : Checks if two values are equal.
                 !=  : Checks if two values are not equal.
@@ -49,51 +51,67 @@ def print_rules():
             1. Evaluate False and True  → False.
             2. Evaluate False or True   → True.
             RESULT = TRUE
-    """)
+    """
+    )
+
 
 def get_user_action():
     return input("\nAction (assign/eval/exit): ").strip().lower()
 
 
 def assign_variable(visitor):
-    try:
+    while True:
         var = input("Variable (e.g., x or y): ").strip()
-        if not var.isidentifier():
-            CustomErrorListener.handle_custom_error("Invalid variable name. Use valid identifiers (e.g., a, b1).")
+        try:
+            if var == "exit":
+                break
+            if not var.isidentifier():
+                CustomErrorListener.handle_custom_error(
+                    "Invalid variable name. Use valid identifiers (e.g., a, b1)."
+                )
 
-        value = input("Value (True/False/Number): ").strip()
-        
-        # Determine the type of the variable
-        if value.lower() == "true":
-            visitor.declare_variable(var, True)
-        elif value.lower() == "false":
-            visitor.declare_variable(var, False)
-        elif value.isdigit():
-            visitor.declare_variable(var, int(value))
-        else:
-            CustomErrorListener.handle_custom_error("Value must be 'true', 'false', or a number.")
-            return
-        print(f"Assigned: {var} = {visitor.variables[var]}")
-    except ValueError as e:
-        CustomErrorListener.handle_custom_error(e)
+            # value = input("Value (True/False/Number): ").strip()
+            value = input("Value (true/false/Number): ").strip()
+
+            # Determine the type of the variable
+            # if value.lower() == "true":
+            if value == "true":
+                visitor.declare_variable(var, True)
+            # elif value.lower() == "false":
+            elif value == "false":
+                visitor.declare_variable(var, False)
+            elif value.isdigit():
+                visitor.declare_variable(var, int(value))
+            else:
+                CustomErrorListener.handle_custom_error(
+                    "Value must be 'true', 'false', or a number."
+                )
+                return
+            print(f"Assigned: {var} = {visitor.variables[var]}", "\n")
+        except ValueError as e:
+            CustomErrorListener.handle_custom_error(e)
+
 
 def evaluate_expression(visitor):
-    expression = input("Enter a Boolean or comparison expression: ")
-    try:
-        input_stream = InputStream(expression)
-        lexer = BooleanExpressionLexer(input_stream)
-        lexer.removeErrorListeners()
-        lexer.addErrorListener(CustomErrorListener())
-        stream = CommonTokenStream(lexer)
-        parser = BooleanExpressionParser(stream)
-        parser.removeErrorListeners()
-        parser.addErrorListener(CustomErrorListener())
-        tree = parser.expr()
-        result = visitor.visit(tree)
-        print(tree.toStringTree(recog=parser))
-        print("Result:", result)
-    except Exception as e:
-        CustomErrorListener.handle_custom_error(f"Error: {e}")
+    while True:
+        expression = input("Enter a Boolean or comparison expression: ")
+        try:
+            if expression == "exit":
+                break
+            input_stream = InputStream(expression)
+            lexer = BooleanExpressionLexer(input_stream)
+            lexer.removeErrorListeners()
+            lexer.addErrorListener(CustomErrorListener())
+            stream = CommonTokenStream(lexer)
+            parser = BooleanExpressionParser(stream)
+            parser.removeErrorListeners()
+            parser.addErrorListener(CustomErrorListener())
+            tree = parser.expr()
+            result = visitor.visit(tree)
+            print(tree.toStringTree(recog=parser))
+            print("Result:", result, "\n")
+        except Exception as e:
+            CustomErrorListener.handle_custom_error(f"Error: {e}")
 
 
 def main():
@@ -112,7 +130,9 @@ def main():
             print("Exiting the program.")
             break
         else:
-            CustomErrorListener.handle_custom_error("Invalid action. Please choose from 'assign', 'eval', or 'exit'.")
+            CustomErrorListener.handle_custom_error(
+                "Invalid action. Please choose from 'assign', 'eval', or 'exit'."
+            )
 
 
 if __name__ == "__main__":
