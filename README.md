@@ -39,10 +39,9 @@ A Python-based tool to parse and evaluate Boolean expressions.
 - **Evaluator**: Recursively evaluates the AST based on variable values.
 - **Modular Design**: Easily extendable and maintainable.
 
----
 
 ## Project Structure
-
+```powershell
 boolean-expression-evaluator/
 ├── grammar/                # ANTLR grammar files
 │   ├── boolean_expression/ # Specific grammar for the boolen expression        
@@ -52,8 +51,7 @@ boolean-expression-evaluator/
 ├── main.py                 # Entry point of the application
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
-
----
+```
 
 ## Project Structure Details
 
